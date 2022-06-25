@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouser Function</title>
+</head>
+<body style="text-align: center;">
+    
+    <script>
+        function sum (a, b, c) {
+            return {
+            addTwo:function () {
+                return a + b;
+            },
+            addThree:function () {
+                return a + b + c;
+            }
+            }
+        }
+        var store = sum(5 , 2 , 1);
+        document.write("This is the First innerFunction that add Two numbers : <strong>("+store.addTwo()+ ")</strong><br>")
+        document.write("This is the second innerFunction that add Three numbers : <strong>(" +store.addThree() + ")</strong><br><br><br><hr> ")
+        document.write("<h2>Another Example.</h2>")
+
+        // _____________________________________________________________________________________________________________________________________
+
+                // Another Example
+        const  Array = () => {
+            var arr1 = [2, 4, 6, 8, 10];
+            document.write("This is the parent function "+arr1 + "<br>")
+
+            function innerarray(){
+            var arr2 = [1, 3, 5, 7, 9];
+            document.write("This is the inner Array of the function " + arr2)
+
+            }
+            innerarray();
+        }
+        Array();
+
+    </script>
+</body>
+</html>
