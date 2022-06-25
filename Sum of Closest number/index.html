@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h3>Pair with the given sum in a sorted array.</h3>
+    <script>
+        var arr = [10, 22, 28, 29, 30, 40], x = 54;
+        var n = arr.length;
+
+        function closeSum(arr, n, x){
+            let l = 0 , r = n - 1 , diff = Number.MAX_VALUE;
+
+            while(l < r){
+                if(Math.abs(arr[l] + arr[r] - x) < diff){
+                    result_l = l;
+                    result_r = r;
+                    diff = Math.abs(arr[l] + arr[r] - x)
+                }
+                if(arr[l] + arr[r] > x)
+                r--;
+                else
+                l++
+            }
+            document.write("<hr><h2>Output</h2><b>"+ arr[result_l]+ " and " + arr[result_r]+ "</b><br><br> The X Value is 54." );
+        }
+        closeSum(arr, n , x)
+    </script>
+</body>
+</html>
